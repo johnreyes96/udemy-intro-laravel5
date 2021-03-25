@@ -38,10 +38,13 @@ Route::post('/hola-mundo', function() {
 // });
 
 Route::get('contacto/{nombre?}/{edad?}', function($nombre = "John Reyes", $edad = 45) {
-    return view('contacto', array(
+    /*return view('contacto', array(
         "nombre" => $nombre,
         "edad" => $edad
-    ));
+    ));*/
+    return view('contacto')
+            ->with('nombre', $nombre)
+            ->with('edad', $edad);
 })->where([
     'nombre' => '[A-Za-z]+',
     'edad' => '[0-9]+'
