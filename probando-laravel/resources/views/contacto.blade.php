@@ -1,1 +1,1 @@
-<h1>Página de contacto</h1>
+<h1>Página de contacto {{ $nombre }} {{ $edad }}</h1>

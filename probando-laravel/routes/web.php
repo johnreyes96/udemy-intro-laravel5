@@ -21,6 +21,28 @@ Route::get('/hola-mundo', function() {
     return 'Hola Mundo!! Soy John Reyes';
 });
 
-Route::get('/contacto', function() {
-    return view('contacto');
+Route::post('/hola-mundo', function() {
+    return 'Hola Mundo!! Soy John Reyes por POST';
 });
+
+// Route::match(['get', 'post'], 'contacto', function() {
+//     return view('contacto');
+// });
+
+// Route::any('contacto', function() {
+//     return view('contacto');
+// });
+
+Route::get('contacto/{nombre?}', function($nombre = "John Reyes") {
+    return view('contacto', array("nombre" => $nombre));
+});
+
+Route::get('contacto/{nombre?}/{edad?}', function($nombre = "John Reyes", $edad = 45) {
+    return view('contacto', array(
+        "nombre" => $nombre,
+        "edad" => $edad
+    ));
+})->where([
+    'nombre' => '[A-Za-z]+',
+    'edad' => '[0-9]+'
+]);
