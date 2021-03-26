@@ -7,7 +7,15 @@
 @else
     Si existe la edad: {{ $edad }}
 @endif
+<br>
 
 <!--if():
 else:
 endif;-->
+
+<?php $numero = 6; ?>
+<p>Tabla del {{ $numero }}</p>
+
+@for($i = 1; $i <= 10; $i++)
+    {{ $i.' x '.$numero.' = '.($i*$numero) }}<br>
+@endfor
