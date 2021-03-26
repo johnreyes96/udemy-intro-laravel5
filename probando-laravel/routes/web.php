@@ -44,7 +44,8 @@ Route::get('contacto/{nombre?}/{edad?}', function($nombre = "John Reyes", $edad 
     ));*/
     return view('contacto.contacto')
             ->with('nombre', $nombre)
-            ->with('edad', $edad);
+            ->with('edad', $edad)
+            ->with('frutas', array('naranja', 'pera', 'sandia', 'fresa', 'melon', 'piña'));
 })->where([
     'nombre' => '[A-Za-z]+',
     'edad' => '[0-9]+'

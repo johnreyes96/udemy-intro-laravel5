@@ -26,3 +26,8 @@ endif;-->
     <p>{{ 'Hola mundo '.$j }}</p>
     <?php $j++ ?>
 @endwhile
+
+<h1>Listado de frutas</h1>
+@foreach($frutas as $fruta)
+    <p>{{ $fruta }}</p>
+@endforeach
