@@ -19,3 +19,10 @@ endif;-->
 @for($i = 1; $i <= 10; $i++)
     {{ $i.' x '.$numero.' = '.($i*$numero) }}<br>
 @endfor
+
+<?php $j = 1; ?>
+{{-- $j = 1 --}}
+@while($j <= 7)
+    <p>{{ 'Hola mundo '.$j }}</p>
+    <?php $j++ ?>
+@endwhile
