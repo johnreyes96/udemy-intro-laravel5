@@ -37,7 +37,7 @@ Route::post('/hola-mundo', function() {
 //     return view('contacto', array("nombre" => $nombre));
 // });
 
-Route::get('contacto/{nombre?}/{edad?}', function($nombre = "John Reyes", $edad = 45) {
+Route::get('contacto/{nombre?}/{edad?}', function($nombre = "John Reyes", $edad = null) {
     /*return view('contacto', array(
         "nombre" => $nombre,
         "edad" => $edad
