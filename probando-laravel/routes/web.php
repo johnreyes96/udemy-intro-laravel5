@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/hola-mundo', function() {
-    return 'Hola Mundo!! Soy John Reyes';
+    return view('hola-mundo');
 });
 
 Route::post('/hola-mundo', function() {
