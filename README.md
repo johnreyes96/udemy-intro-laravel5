@@ -4,4 +4,4 @@ This repository is about udemy curse Introducción a Laravel 5 - Primeros pasos 
 # Dictionary
 Blade: It's template system
 
-Layouts: It's a template to view's
+Layouts: It's a template to views
